@@ -12,7 +12,7 @@ DATABASE school_management
     LOCALE_PROVIDER = 'libc'
     TABLESPACE = pg_default
     CONNECTION LIMIT = -1
-    IS_TEMPLATE = False;
+    IS_TEMPLATE = FALSE;
 
 COMMENT
 ON DATABASE school_management
@@ -20,12 +20,11 @@ ON DATABASE school_management
 
 -- Exercise 1.2: Create Tables
 CREATE TABLE public.courses
-(
-    id          integer                NOT NULL GENERATED ALWAYS AS IDENTITY,
-    course_name character varying(100) NOT NULL,
-    credits     integer                NOT NULL,
-    PRIMARY KEY (id)
-);
+    (
+        id integer NOT NULL GENERATED ALWAYS AS IDENTITY,
+        course_name character varying(100) NOT NULL,
+        credits integer NOT NULL,
+        PRIMARY KEY (id)
+    );
 
-ALTER TABLE IF EXISTS public.courses
-    OWNER to postgres;
+ALTER TABLE if EXISTS PUBLIC.courses OWNER TO postgres;
