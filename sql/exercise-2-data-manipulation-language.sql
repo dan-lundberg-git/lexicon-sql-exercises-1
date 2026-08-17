@@ -4,7 +4,10 @@
 INSERT INTO courses(course_name, credits)
 VALUES ('Java Programming', 15),
        ('SQL Basics', 7),
-       ('Web Development', 15);
+       ('Web Development', 15),
+       ('React Development', 7),
+       ('Vue.js Development', 7),
+       ('PostgreSQL', 15);
 
 -- Exercise 2.2: Update Data
 UPDATE courses
