@@ -56,3 +56,44 @@ CREATE TABLE bookstore.books_authors
 
 ALTER TABLE IF EXISTS bookstore.books_authors
     OWNER TO postgres;
+
+-- Some data
+INSERT INTO bookstore.authors(name, bio)
+VALUES ('Jane Austen', 'Temporary bio'),
+       ('Jules Verne', 'Temporary bio'),
+       ('Leo Tolstoy', 'Temporary bio'),
+       ('F. Scott Fitzgerald', 'Temporary bio'),
+       ('Mark Twain', 'Temporary bio'),
+       ('Fyodor Dostoevsky ', 'Temporary bio'),
+       ('Charles Dickens', 'Temporary bio'),
+       ('Herman Melville', 'Temporary bio'),
+       ('Alice Walker', 'Temporary bio'),
+       ('Toni Morrison', 'Temporary bio');
+
+INSERT INTO bookstore.genres(name, description)
+VALUES ('Fiction', 'Fiction literature'),
+       ('Non-Fiction', 'Non-Fiction literature');
+
+INSERT INTO bookstore.books(title, description, isbn, genre_id)
+VALUES ('Pride and Prejudice', 'Temporary description', '1234567890121', 1),
+       ('Journey to the Centre of the Earth', 'Temporary description', '1234567890122', 1),
+       ('War and Peace', 'Temporary description', '1234567890123', 1),
+       ('The Great Gatsby', 'Temporary description', '1234567890124', 1),
+       ('Adventures of Huckleberry Finn', 'Temporary description', '1234567890125', 1),
+       ('Crime and Punishment', 'Temporary description', '1234567890126', 1),
+       ('Great Expectations', 'Temporary description', '1234567890127', 1),
+       ('Moby Dick', 'Temporary description', '1234567890128', 1),
+       ('Song of Solomon', 'Temporary description', '1234567890129', 1),
+       ('The Color Purple', 'Temporary description', '1234567890120', 1);
+
+INSERT INTO bookstore.books_authors(book_id, author_id, is_main_author)
+VALUES (1, 1, TRUE),
+       (2, 2, TRUE),
+       (3, 3, TRUE),
+       (4, 4, TRUE),
+       (5, 5, TRUE),
+       (6, 6, TRUE),
+       (7, 7, TRUE),
+       (8, 8, TRUE),
+       (9, 10, TRUE),
+       (10, 9, TRUE);
